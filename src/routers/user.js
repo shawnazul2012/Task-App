@@ -6,6 +6,12 @@ const auth = require('../middleware/auth')
 const { sendWelcomeEmail, sendCancelationEmail } = require('../emails/account')
 const router = new express.Router()
 
+router.get('/', (req, res) => {
+    res.send("I'm hear no one will harm you")
+    
+}) 
+
+
 router.post('/users', async (req, res) => {
     const user = new User(req.body)
 
